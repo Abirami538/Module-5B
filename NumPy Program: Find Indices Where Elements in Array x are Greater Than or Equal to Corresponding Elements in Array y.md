@@ -1,43 +1,30 @@
-# 🐍 Python OOP: Encapsulation with Private Members
+# # NumPy Program: Find Indices Where Elements in Array x are Greater Than or Equal to Corresponding Elements in Array y
 
-## 🎯 AIM
+## 🎯 Aim
+To write a Python program using **NumPy** that finds the indices where elements in array `x` are greater than or equal to their corresponding elements in array `y`.
 
-To implement **Encapsulation** in Python by defining a class `Rectangle` with **private member variables** `__length` and `__breadth`.
+## 🧠 Algorithm
+1. **Import NumPy**: Import the NumPy library.
+2. **Define Arrays**: Define two NumPy arrays, `x` and `y`, with the same shape (i.e., same number of elements).
+3. **Use Boolean Indexing**: 
+   - `x > y` gives a boolean array where elements of `x` are greater than `y`.
+   - `x == y` gives a boolean array where elements of `x` are equal to `y`.
+4. **Find Indices**: Use `np.where()` to get the indices where the conditions `x >= y` are satisfied.
+5. **Print Indices**: Print the indices where the condition holds true.
 
----
-
-## 🧠 ALGORITHM
-
-1. **Define the Class**:
-   - Create a class `Rectangle` with two private attributes: `__length` and `__breadth`.
-
-2. **Initialize Variables**:
-   - Use the `__init__()` constructor to set initial values for `__length` and `__breadth`.
-
-3. **Print Values**:
-   - Display the private variables from within the class to demonstrate access.
-
-4. **Instantiate the Object**:
-   - Create an object of the `Rectangle` class to trigger the constructor.
-
----
-
-## 💻 Program
+## 🧾 Program
 ```
-class Rectangle:
-    __length = 0 
-    __breadth = 0
-    def __init__(self):
-      self.__length = 5
-      self.__breadth = 3
-      print(self.__length)
-      print(self.__breadth)
-   
-  obj = Rectangle()
+import numpy as np
+a=np.array(eval(input()))
+b=np.array(eval(input()))
+x=np.where(a>b)
+print(x)
+y=np.where(a==b)
+print(y)
 ```
 
 ## Output
-<img width="290" height="132" alt="image" src="https://github.com/user-attachments/assets/e00027c3-07cc-42a0-85b4-8c399355390d" />
+<img width="1069" height="226" alt="image" src="https://github.com/user-attachments/assets/225a7d7b-6b76-49d5-be29-a4bb02ac58d3" />
 
 ## Result
-Thus, the program to implement Encapsulation with Private Members in Python was executed successfully and produced the expected result.
+Thus, the program to find indices where elements in array x are greater than or equal to corresponding elements in array y was executed successfully.
